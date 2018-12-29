@@ -1,8 +1,8 @@
 require 'pry'
 def reformat_languages(languages)
   new_hash = {}
-  languages.map do |style, language_list|
-    language_list.map do |language, type|
+  languages.each do |style, language_list|
+    language_list.each do |language, type|
       if new_hash[language]
         new_hash[language][:style] << style
       else
